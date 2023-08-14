@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 import Cast from "./cast/Cast";
 import VideosSection from "./videoSection/VideoSection";
-import Similar from './carousel/Similar';
-import Recommendation from './carousel/Recommendation';
-const details = () => {
+import Similar from "./carousel/Similar";
+import Recommendation from "./carousel/Recommendation";
+const Details = () => {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
   const { data: credits, loading: creditsLoading } = useFetch(
@@ -25,4 +25,4 @@ const details = () => {
   );
 };
 
-export default details;
+export default Details;
